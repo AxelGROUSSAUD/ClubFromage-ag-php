@@ -11,6 +11,7 @@ class Autoloader
 
        $file = str_replace('\\', '/', $class_name);
        $file = '.' . $file . '.php';
+       $file = str_replace('Club_Fromage','',$file);
        if(file_exists($file))
            return require $file;
        
