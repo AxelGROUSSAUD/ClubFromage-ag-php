@@ -1,6 +1,6 @@
 <?php
 
-namespace Club_Fromage\Model;
+namespace Club_Fromage;
 class Autoloader
 {
    static function register(){
