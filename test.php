@@ -1,6 +1,7 @@
 <?php
 require 'Autoloader.php';
-
+use Monolog\Logger;
+use Monolog\Handler\StreamHandler;
 
 use Club_Fromage\{
 
@@ -10,6 +11,11 @@ use Club_Fromage\{
     Model\Buisness\Pays
 };
 use Club_Fromage\Autoloader;
+//require __DIR__ . '/vendor/autoload.php';
+
+//$log = new Monolog\Logger('name');
+//$log->pushHandler(new Monolog\Handler\StreamHandler('app.log', Monolog\Logger::WARNING));
+//$log->warning("Foo");
 Autoloader::register();
 
 $tabAvis = array (
@@ -59,6 +65,7 @@ echo $Paystest->getIdPays()." ".$Paystest->getNom()."<br>";
 
 $Membretest = new Membre($tabMembre);
 echo $Membretest->getId()." ".$Membretest->getNomUtilisateur()." ".$Membretest->getPseudo()." ".$Membretest->getEmail()." ".$Membretest->getMotDePasse()." ".$Membretest->getDateDerConnexion()." ".$Membretest->getDateEntreeClub()." ".$Membretest->getDescription();
+
 
 
 

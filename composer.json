@@ -1,0 +1,22 @@
+{
+  "name": "vendor_name/Club_Fromage",
+  "description": "description",
+  "minimum-stability": "stable",
+  "license": "proprietary",
+  "authors": [
+    {
+      "name": "SIO2",
+      "email": "email@example.com"
+    }
+  ],
+  "require": {
+    "monolog/monolog": "^2.1"
+  },
+  "autoload": {
+    "psr-4": {"Club_Fromage\\": "Model/Buisness/"}
+  }
+
+
+
+
+}
