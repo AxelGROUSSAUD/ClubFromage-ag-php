@@ -25,10 +25,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7f23f74c-dbfa-46cd-a976-add707ed1cb9" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/Club_Fromage.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Club_Fromage.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Model/Buisness/JsonSerializable.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Model/Buisness/Fromage.php" beforeDir="false" afterPath="$PROJECT_DIR$/Model/Buisness/Fromage.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Model/Buisness/Membre.php" beforeDir="false" afterPath="$PROJECT_DIR$/Model/Buisness/Membre.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Model/Buisness/Pays.php" beforeDir="false" afterPath="$PROJECT_DIR$/Model/Buisness/Pays.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/test.php" beforeDir="false" afterPath="$PROJECT_DIR$/test.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -36,7 +37,7 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ComposerSettings">
+  <component name="ComposerSettings" doNotAsk="true">
     <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
     <execution>
       <executable path="C:\Bitnami\wampstack-7.4.6-1\apps\Classe_PHP\htdocs\Club_Fromage\composer.json" />
@@ -77,8 +78,8 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Bitnami\wampstack-7.4.6-1\apps\Classe_PHP\htdocs\Club_Fromage" />
       <recent name="C:\Bitnami\wampstack-7.4.6-1\apps\Classe_PHP\htdocs\Club_Fromage\Model\Buisness" />
+      <recent name="C:\Bitnami\wampstack-7.4.6-1\apps\Classe_PHP\htdocs\Club_Fromage" />
     </key>
   </component>
   <component name="RunManager">
@@ -101,7 +102,8 @@
       <workItem from="1600853673424" duration="1606000" />
       <workItem from="1601446195553" duration="9047000" />
       <workItem from="1602060318927" duration="4367000" />
-      <workItem from="1604475238096" duration="8089000" />
+      <workItem from="1604475238096" duration="10068000" />
+      <workItem from="1606287953770" duration="11012000" />
     </task>
     <servers />
   </component>
@@ -129,15 +131,19 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="667" y="163" key="#PHP/0.0.1920.1040/-1920.78.1920.1040@0.0.1920.1040" timestamp="1604478914317" />
-    <state x="414" y="175" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1604479442424">
+    <state x="414" y="175" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1606299556861">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="414" y="175" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040/-1920.78.1920.1040@0.0.1920.1040" timestamp="1604479442424" />
+    <state x="414" y="175" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040/-1920.78.1920.1040@0.0.1920.1040" timestamp="1606299556861" />
     <state x="765" y="236" key="#com.intellij.ide.util.MemberChooser" timestamp="1600852874253">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="765" y="236" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040/-1920.78.1920.1040@0.0.1920.1040" timestamp="1600249133113" />
     <state x="765" y="236" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1600852874253" />
+    <state x="721" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1606288250631">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="721" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1920.1040/-1920.78.1920.1040@0.0.1920.1040" timestamp="1606288250631" />
     <state x="736" y="432" key="ComposerInitDialogKey" timestamp="1604476552171">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -146,30 +152,34 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="739" y="261" key="FileChooserDialogImpl/0.0.1920.1040/-1920.78.1920.1040@0.0.1920.1040" timestamp="1604478904231" />
-    <state width="938" height="282" key="GridCell.Tab.0.bottom" timestamp="1604483366641">
+    <state width="938" height="282" key="GridCell.Tab.0.bottom" timestamp="1606300515257">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="938" height="282" key="GridCell.Tab.0.bottom/0.0.1920.1040/-1920.78.1920.1040@0.0.1920.1040" timestamp="1604483366641" />
-    <state width="938" height="282" key="GridCell.Tab.0.center" timestamp="1604483366641">
+    <state width="938" height="282" key="GridCell.Tab.0.bottom/0.0.1920.1040/-1920.78.1920.1040@0.0.1920.1040" timestamp="1606300515257" />
+    <state width="938" height="282" key="GridCell.Tab.0.center" timestamp="1606300515257">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="938" height="282" key="GridCell.Tab.0.center/0.0.1920.1040/-1920.78.1920.1040@0.0.1920.1040" timestamp="1604483366641" />
-    <state width="938" height="282" key="GridCell.Tab.0.left" timestamp="1604483366641">
+    <state width="938" height="282" key="GridCell.Tab.0.center/0.0.1920.1040/-1920.78.1920.1040@0.0.1920.1040" timestamp="1606300515257" />
+    <state width="938" height="282" key="GridCell.Tab.0.left" timestamp="1606300515257">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="938" height="282" key="GridCell.Tab.0.left/0.0.1920.1040/-1920.78.1920.1040@0.0.1920.1040" timestamp="1604483366641" />
-    <state width="938" height="282" key="GridCell.Tab.0.right" timestamp="1604483366641">
+    <state width="938" height="282" key="GridCell.Tab.0.left/0.0.1920.1040/-1920.78.1920.1040@0.0.1920.1040" timestamp="1606300515257" />
+    <state width="938" height="282" key="GridCell.Tab.0.right" timestamp="1606300515257">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="938" height="282" key="GridCell.Tab.0.right/0.0.1920.1040/-1920.78.1920.1040@0.0.1920.1040" timestamp="1604483366641" />
-    <state x="1173" y="247" key="NewPhpClassDialog" timestamp="1602062090136">
+    <state width="938" height="282" key="GridCell.Tab.0.right/0.0.1920.1040/-1920.78.1920.1040@0.0.1920.1040" timestamp="1606300515257" />
+    <state x="1173" y="247" key="NewPhpClassDialog" timestamp="1606293448972">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="1173" y="247" key="NewPhpClassDialog/0.0.1920.1040/-1920.78.1920.1040@0.0.1920.1040" timestamp="1602062090136" />
+    <state x="1173" y="247" key="NewPhpClassDialog/0.0.1920.1040/-1920.78.1920.1040@0.0.1920.1040" timestamp="1606293448972" />
     <state x="658" y="243" key="NewPhpClassDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1600852195745" />
     <state x="794" y="443" key="NewPhpFileDialog" timestamp="1600853096308">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="794" y="443" key="NewPhpFileDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1600853096308" />
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1606292663030">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040/-1920.78.1920.1040@0.0.1920.1040" timestamp="1606292663030" />
   </component>
 </project>

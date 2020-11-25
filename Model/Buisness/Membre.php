@@ -4,7 +4,7 @@
 namespace Club_Fromage\Model\Buisness;
 
 
-class Membre
+class Membre implements JsonSerializable, IBuisnessClass
 {
   private $_id;
   private $_nomUtilisateur;
@@ -19,6 +19,20 @@ class Membre
     public function __construct(array $data)
     {
         $this->hydrate($data);
+    }
+
+    public function hydrate(array $donnees)
+    {
+        foreach ($donnees as $key => $value)
+        { // On récupère le nom du setter correspondant à l'attribut
+            $method = 'set'.ucfirst($key);
+            // Si le setter correspondant existe.
+            if (method_exists($this, $method))
+            {
+                // On appelle le setter.
+                $this->$method($value);
+            }
+        }
     }
 
     /**
@@ -165,21 +179,31 @@ class Membre
         $this->_activite = $activite;
     }
 
-
-
-
-
-    private function hydrate(array $donnees)
+    public function jsonSerialize()
     {
-        foreach ($donnees as $key => $value)
-        { // On récupère le nom du setter correspondant à l'attribut
-            $method = 'set'.ucfirst($key);
-            // Si le setter correspondant existe.
-            if (method_exists($this, $method))
-            {
-                // On appelle le setter.
-                $this->$method($value);
-            }
-        }
+        $tab = array(
+            "id" => $this->getId(),
+            "nomUtilisateur" => $this->getNomUtilisateur(),
+            "pseudo" => $this->getPseudo(),
+            "email" => $this->getEmail(),
+            "motDePasse" => $this->getMotDePasse(),
+            "dateDerConnexion" => $this->getDateDerConnexion(),
+            "dateEntreeClub" => $this->getDateEntreeClub(),
+            "description" => $this->getDescription()
+
+        );
+        return json_encode($tab,JSON_PRETTY_PRINT) ;
     }
+
+    public function jsonParse($chaineJSON)
+    {
+        return json_decode($chaineJSON,false);
+
+    }
+
+
+
+
+
+
 }

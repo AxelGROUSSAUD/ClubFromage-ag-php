@@ -25,21 +25,26 @@ $tabAvis = array (
     "note"=>1
 );
 
+$tabPays =array(
+    "idPays" => 12,
+    "nom" => "France"
+);
+
+$Paystest = new Pays($tabPays);
+
 $tabFromage = array(
     "id" => 3,
-    "idPays" =>85,
-    "nom" => "Reblochon",
-    "dureeAffinage" => '01-00-00',
+    "name"=>"Reblochon",
+    "origin" => $Paystest,
+
     "dateCreation" => '1900-06-02',
     "image" => "uneImage",
+    "dureeAffinage" => '01-00-00',
     "recette" => "dknhfuiehgrezyègfryegtry",
     "histoire" => "fjenuizehfuizhyklsndciqsohfuihofgry"
 );
 
-$tabPays =array(
-    "idPays" => 12,
-    "nom" => "Abondance"
-);
+
 
 $tabMembre = array(
     "id" => 9,
@@ -56,16 +61,19 @@ $tabMembre = array(
 $avistest = new Avis($tabAvis);
 echo $avistest->getIdMembre()." ".$avistest->getIdFromage()." ".$avistest->getAvis()." ".$avistest->getNote()."<br>";
 
-$fromagetest = new Fromage($tabFromage);
-echo $fromagetest->getId()." ".$fromagetest->getIdPays()." ".$fromagetest->getNom()." ".$fromagetest->getDureeAffinage()." ".$fromagetest->getDateCreation()." ".$fromagetest->getImage()." ".$fromagetest->getRecette()." ".$fromagetest->getHistoire()."<br>";
 
 
-$Paystest = new Pays($tabPays);
+
 echo $Paystest->getIdPays()." ".$Paystest->getNom()."<br>";
 
 $Membretest = new Membre($tabMembre);
-echo $Membretest->getId()." ".$Membretest->getNomUtilisateur()." ".$Membretest->getPseudo()." ".$Membretest->getEmail()." ".$Membretest->getMotDePasse()." ".$Membretest->getDateDerConnexion()." ".$Membretest->getDateEntreeClub()." ".$Membretest->getDescription();
+echo $Membretest->getId()." ".$Membretest->getNomUtilisateur()." ".$Membretest->getPseudo()." ".$Membretest->getEmail()." ".$Membretest->getMotDePasse()." ".$Membretest->getDateDerConnexion()." ".$Membretest->getDateEntreeClub()." ".$Membretest->getDescription()."<br>";
 
+$fromagetest = new Fromage($tabFromage);
+echo $fromagetest->getId()." ".$fromagetest->getName()." ".$fromagetest->getOrigin()->getNom()." ".$fromagetest->getDureeAffinage()." ".$fromagetest->getDateCreation()." ".$fromagetest->getImage()." ".$fromagetest->getRecette()." ".$fromagetest->getHistoire()."<br>";
+//var_dump($fromagetest);
 
-
-
+//echo json_encode($tabMembre, JSON_PRETTY_PRINT);
+//echo $Membretest->jsonSerialize();
+var_dump($Membretest->jsonParse($Membretest->jsonSerialize()));
+echo $Membretest->jsonParse($Membretest->jsonSerialize())->Id;
